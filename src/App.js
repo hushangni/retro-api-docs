@@ -1,5 +1,6 @@
 import React, {Component}from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import logo from './assets/logo.png';
 
 import Login from './components/Login.js';
 import Register from './components/Register.js';
@@ -36,8 +37,9 @@ class App extends Component {
     const { loggedIn, username, password, login } = this.state;
     return (
       <Router>
-        <main>
-          <h1>Retro API docs</h1>
+        <main className="wrapper">
+          <h1 className="visuallyhidden">Retro Rewind API documentation</h1>
+          <img src={logo} alt="Retro Rewind API documentation chrome text image"/>
           {
             loggedIn ?
               <Docs />
