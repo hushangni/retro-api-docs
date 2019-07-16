@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,500|Roboto+Mono:400,700&display=swap');
+/*
+font-family: 'Kanit', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+body {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  color: #e654f6;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+button,
+input[type="submit"] {
+  border-radius: 8.8px;
+  box-shadow: 0 0 7px 4px #5f2ff3;
+  border: solid 2.4px #e654f6;
+  background-color: #5f2ff3;
+  color: white;
+  letter-spacing: 1.4px;
+  padding: 10px 25px 8px;
+  margin: 20px;
+  transition: background 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover,
+button:focus-within,
+input[type="submit"]:hover,
+input[type="submit"]:focus-within {
+  background-color: #e654f6;
+}
+
+.register-login {
+  border-radius: 16px;
+  box-shadow: 0 0 9px 5px rgba(47, 138, 243, 0.5);
+  border: solid 3px #80bafc;
+  background-color: rgba(1, 1, 16, 0.9);
+  color: white;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 20px;
+}
