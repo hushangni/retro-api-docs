@@ -87,7 +87,11 @@ input[type="submit"] {
   transition: background 0.3s;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+button {
+  background: none;
 }
 
 button:hover,

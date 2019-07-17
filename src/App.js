@@ -17,8 +17,16 @@ class App extends Component {
       username: "",
       password: "",
       loggedIn: false,
-      login: false
+      login: false,
+      token: ""
     }
+  }
+
+  setToken = (token) => {
+    this.setState({
+      token
+    })
+    console.log(this.state.token);
   }
 
   showLogin = () => {
@@ -34,7 +42,7 @@ class App extends Component {
   }
 
   render() {
-    const { loggedIn, username, password, login } = this.state;
+    const { loggedIn, username, password, login, token } = this.state;
     return (
       <Router>
         <main className="wrapper">
@@ -46,9 +54,15 @@ class App extends Component {
             :
               (
               login ?
-                <Login showRegister={this.showRegister}/>
+                <Login
+                  showRegister={this.showRegister}
+                  setToken={this.setToken}
+                />
               :
-                <Register showLogin={this.showLogin}/>
+                <Register
+                  showLogin={this.showLogin}
+                  setToken={this.setToken}
+                />
               )
           }
         </main>
