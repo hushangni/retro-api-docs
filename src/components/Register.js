@@ -23,7 +23,7 @@ class Register extends Component {
         const { email, password } = this.state;
         console.log(email, password);
         try {
-            const res = await axios.post('http://localhost:5000/api/users/register', {
+            const res = await axios.post('https://retroapi.hackeryou.com/api/users/register', {
                 email: email,
                 password: password
             });
@@ -58,7 +58,7 @@ class Register extends Component {
 
                     <div className="form-field">
                         <label htmlFor="password">Password: </label>
-                        <input type="password" name="password" id="password" placeholder="supersecret" onChange={this.handleChange}/>
+                        <input type="password" name="password" id="password" placeholder="*********" onChange={this.handleChange}/>
                     </div>
 
                     <input type="submit" value="register"/>

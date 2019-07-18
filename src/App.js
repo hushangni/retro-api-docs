@@ -41,6 +41,12 @@ class App extends Component {
     })
   }
 
+  logout = () => {
+    this.setState({
+      loggedIn: false
+    })
+  }
+
   render() {
     const { loggedIn, username, password, login, token } = this.state;
     return (
@@ -50,19 +56,28 @@ class App extends Component {
           <img src={logo} alt="Retro Rewind API documentation chrome text image"/>
           {
             loggedIn ?
-              <Docs token={token}/>
+              <Docs
+                token={token}
+                logout={this.logout}
+              />
             :
               (
               login ?
-                <Login
-                  showRegister={this.showRegister}
-                  setToken={this.setToken}
-                />
+                <>
+                  <p className="desc">An API that gets you the top 5 most popular movies, shows, books, and songs of the retro age.</p>
+                  <Login
+                    showRegister={this.showRegister}
+                    setToken={this.setToken}
+                  />
+                </>
               :
-                <Register
-                  showLogin={this.showLogin}
-                  setToken={this.setToken}
-                />
+                <>
+                  <p className="desc">An API that gets you the top 5 most popular movies, shows, books, and songs of the retro age.</p>
+                  <Register
+                    showLogin={this.showLogin}
+                    setToken={this.setToken}
+                  />
+                </>
               )
           }
         </main>

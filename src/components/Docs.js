@@ -4,6 +4,7 @@ const Docs = (props) => {
     return (
         <section className="docs">
             <h2>API Documentation </h2>
+            <button onClick={props.logout}>Logout</button>
 
             <div className="route-box api-general">
                 <h3>API Key:</h3>
