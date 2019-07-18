@@ -24,9 +24,9 @@ class App extends Component {
 
   setToken = (token) => {
     this.setState({
-      token
+      token,
+      loggedIn: true
     })
-    console.log(this.state.token);
   }
 
   showLogin = () => {
@@ -50,7 +50,7 @@ class App extends Component {
           <img src={logo} alt="Retro Rewind API documentation chrome text image"/>
           {
             loggedIn ?
-              <Docs />
+              <Docs token={token}/>
             :
               (
               login ?
