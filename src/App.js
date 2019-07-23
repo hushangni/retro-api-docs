@@ -1,5 +1,5 @@
 import React, {Component}from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import logo from './assets/logo.png';
 
 import Login from './components/Login.js';
@@ -14,8 +14,6 @@ class App extends Component {
     super();
 
     this.state = {
-      username: "",
-      password: "",
       loggedIn: false,
       login: false,
       token: ""
@@ -48,12 +46,12 @@ class App extends Component {
   }
 
   render() {
-    const { loggedIn, username, password, login, token } = this.state;
+    const { loggedIn, login, token } = this.state;
     return (
       <Router>
         <main className="wrapper">
           <h1 className="visuallyhidden">Retro Rewind API documentation</h1>
-          <img src={logo} alt="Retro Rewind API documentation chrome text image"/>
+          <img src={logo} alt="Retro Rewind API documentation chrome text"/>
           {
             loggedIn ?
               <Docs
