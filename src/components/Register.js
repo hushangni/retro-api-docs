@@ -19,9 +19,7 @@ class Register extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("handling register submit");
         const { email, password } = this.state;
-        console.log(email, password);
         try {
             const res = await axios.post('https://retroapi.hackeryou.com/api/users/register', {
                 email: email,

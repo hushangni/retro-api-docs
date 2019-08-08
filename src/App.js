@@ -62,7 +62,8 @@ class App extends Component {
               (
               login ?
                 <>
-                  <p className="desc">An API that gets you the top 5 most popular movies, shows, books, and songs of the retro age.</p>
+                  <p className="desc">An API that gets you the top 5 most popular movies, shows, books, and songs of the retro age from 1980 - 2015</p>
+
                   <Login
                     showRegister={this.showRegister}
                     setToken={this.setToken}
@@ -70,7 +71,7 @@ class App extends Component {
                 </>
               :
                 <>
-                  <p className="desc">An API that gets you the top 5 most popular movies, shows, books, and songs of the retro age.</p>
+                    <p className="desc">An API that gets you the top 5 most popular movies, shows, books, and songs of the retro age from 1980 - 2015</p>
                   <Register
                     showLogin={this.showLogin}
                     setToken={this.setToken}

@@ -67,11 +67,21 @@ caption {
   margin: 0 auto;
 }
 
+.logo {
+  opacity: 0.01;
+}
+
+.logo-enter.logo-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
 .desc {
   color: white;
   text-align: center;
   text-shadow: 1px 1px rgba(47, 138, 243, 0.8);
   margin: 20px 0;
+  font-size: 21px;
 }
 
 .register-login,
@@ -219,4 +229,23 @@ th:not(:last-child) {
 td:nth-child(2),
 .optional {
   font-style: italic;
+}
+
+@media (max-width: 530px) {
+  .docs {
+    padding: 10px;
+  }
+
+  tr:first-child th {
+    font-size: 16px;
+  }
+
+  td,
+  th {
+    padding: 10px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
 }

@@ -18,7 +18,6 @@ class Login extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("handling login submit");
         const { email, password } = this.state;
         try {
             const res = await axios.post('https://retroapi.hackeryou.com/api/users/login', {
